@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Righteous|Roboto+Condensed:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Dawid Pachciarek - junior front-end developer</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="fixed-nav">
+      <div class="fixed-nav__character">
+        <div class="fixed-nav__character__image">
+          <img src="images/programmer.png" alt=""></div>
+        <div class="fixed-nav__character__name">Dawid Pachciarek</div>
+      </div>
+      <div class="fixed-nav__links">
+        <button class="fixed-nav__mobile-burger" id="nav-btn"><span class="fas fa-bars"></span></button>
+        <nav class="fixed-nav__nav" id="navigation">
+          <ul class="fixed-nav__nav__list">
+            <li class="fixed-nav__nav__item">
+              <a href="#" class="fixed-nav__nav__link" data-scroll="#start">
+                <span class="fixed-nav__nav__ico fas fa-home"></span>
+                Start
+              </a>
+            </li>
+            <li class="fixed-nav__nav__item">
+              <a href="#about-me" class="fixed-nav__nav__link" data-scroll="#about-me">
+                <span class="fixed-nav__nav__ico far fa-user"></span>
+                O mnie
+              </a>
+            </li>
+            <li class="fixed-nav__nav__item">
+              <a href="#skills" class="fixed-nav__nav__link" data-scroll="#skills">
+                <span class="fixed-nav__nav__ico fas fa-tools"></span>
+                Umiejętności
+              </a>
+            </li>
+            <li class="fixed-nav__nav__item">
+              <a href="#realizations" class="fixed-nav__nav__link" data-scroll="#realizations">
+                <span class="fixed-nav__nav__ico fas fa-desktop"></span>
+                Realizacje
+              </a>
+            </li>
+            <li class="fixed-nav__nav__item">
+              <a href="#contact" class="fixed-nav__nav__link" data-scroll="#contact">
+                <span class="fixed-nav__nav__ico far fa-address-card"></span>
+                Kontakt
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <header class="main-header" id="start">
+      <div class="main-header__icons">
+        <span class="icon fab fa-html5" style="top: 10%; left: 6%;"></span>
+        <span class="icon fab fa-react" style="animation-delay: 2s; top: 66%; left: 77%;"></span>
+        <span class="icon fab fa-css3" style="animation-delay: 4s; top: 50%; left: 18%;"></span>
+        <span class="icon fab fa-git" style="animation-delay: 6s; top: 68%; left: 40%;"></span>
+        <span class="icon fab fa-sass" style="animation-delay: 8s; top: 15%; left: 80%;"></span>
+        <span class="icon fab fa-php" style="animation-delay: 10s; top: 78%; left: 63%;"></span>
+        <span class="icon fab fa-angluar" style="animation-delay: 12s; top: 48%; left: 53%;"></span>
+        <span class="icon fas fa-database" style="animation-delay: 14s; top: 40%; left: 66%;"></span>
+        <span class="icon fab fa-js" style="animation-delay: 16s; top: 82%; left: 12%;"></span>
+        <span class="icon fab fa-wordpress" style="animation-delay: 18s; top: 54%; left: 88%;"></span>
+      </div>
+      <div class="main-header__left">
+        <section class="welcome" data-animation="opacity-elements3">
+          <h1 class="welcome__title">Dawid Pachciarek</h1>
+          <span class="welcome__subtitle">junior front-end developer</span>
+          <p class="welcome__desc">Jestem pełnym pasji i energii do nauki, szukającym pracy Junior Front End
+            Developerem</p>
+        </section>
+        <a href="#about-me" class="main-header__scroll-link"><img src="images/scroll.png" alt=""></a>
+      </div>
+      <div class="main-header__right">
+        <div class="important-links" data-animation="opacity-elements4">
+          <div class="link-ico link-ico--hover-name">
+            <a href="" class="link-ico__ico"><span class="far fa-address-card"></span></a>
+            <a href="" class="link-ico__title link-ico__title--left">CV</a>
+          </div>
+          <div class="link-ico link-ico--hover-name">
+            <a href="mailto:pachciar3@gmail.com" class="link-ico__ico"><span class="fas fa-at"></span></a>
+            <a href="mailto:pachciar3@gmail.com" class="link-ico__title link-ico__title--left">Mail</a>
+          </div>
+          <div class="link-ico link-ico--hover-name">
+            <a href="https://github.com/Pachciar3/" class="link-ico__ico"><span class="fab fa-github"></span></a>
+            <a href="https://github.com/Pachciar3/" class="link-ico__title link-ico__title--left">Github</a>
+          </div>
+          <div class="link-ico link-ico--hover-name">
+            <a href="https://www.linkedin.com/in/dawid-pachciarek-5ab67416b" class="link-ico__ico"><span class="fab fa-linkedin"></span></a>
+            <a href="https://www.linkedin.com/in/dawid-pachciarek-5ab67416b" class="link-ico__title link-ico__title--left">Linkedin</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section" id="about-me">
+      <h2 class="section__title">O mnie</h2>
+      <div class="section__wrapper section__wrapper--about-me">
+        <div class="section__col1">
+          <article class="about-me" data-animation="show">
+            <span class="about-me__title">Witaj</span>
+            <p class="about-me__desc">jestem początkującym Junior Front End Developerem. Od zawsze
+              interesowałem się informatyką i programowaniem, więc swoją pierwszą stronę internetową stworzyłem dość
+              wcześnie, bo już w 2012 roku. Pomimo niesamowitej zabawy przy tym zbytnio nie rozwijałem się dalej w tym
+              kierunku. Całe szczęście pewnego razu zostałem poproszony o stworzenie strony internetowej pewnego
+              Hotelu. Zobaczyłem wówczas ogromny rozwój Web Developmentu przez ostatnie lata, bardzo mnie to
+              zafascynowało i pochłoneło do reszty, dlatego dziś mogę być szczęśliwym poszukiwaczem pracy, w której nie
+              przepracuje ani jednego dnia, ponieważ będzie ona moją pasją.
+            </p>
+            <p class="about-me__desc">
+            </p>
+            <div class="advantages" data-animation="show">
+              <div class="advantages__advantage">
+                Pracowity
+              </div>
+              <div class="advantages__advantage">
+                Pomocny
+              </div>
+              <div class="advantages__advantage">
+                Uczciwy
+              </div>
+              <div class="advantages__advantage">
+                Pasjonat
+              </div>
+            </div>
+        </div>
+        <article class="timeline section__col2">
+          <h3 class="section__title section__title--small" data-animation="show">Edukacja</h3>
+          <div class="timeline__line"></div>
+          <ul class="timeline__list" data-animation="show">
+            <li class="timeline__item timeline__item--long">
+              <div class="timeline__date">2012</div>
+              <div class="timeline__text">Pierwsza strona internetowa</div>
+            </li>
+            <li class="timeline__item timeline__item--middle">
+              <div class="timeline__date">2016</div>
+              <div class="timeline__text">Zafascynowanie się Web Developmentem</div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__date">2018</div>
+              <div class="timeline__text">Ukończenie kursów</div>
+            </li>
+            <li class="timeline__item">
+              <div class="timeline__date">2019</div>
+              <div class="timeline__text">Poszukiwania pracy</div>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="section section--image" id="skills" style="
+    background-image: 
+    linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(images/programming-bgc.jpg);
+    ">
+      <h2 class="section__title">Umiejętności</h2>
+      <div class="section__wrapper">
+        <div class="skills" data-animation="show">
+          <h3 class="skills__title section__title section__title--small">Korzystam</h3>
+          <div class="skills__buttons" id="skills-btns">
+            <button class="skills__button is-active">
+              <span class="skills__button__ico fab fa-html5"></span>
+              <span class="skills__button__name">HTML 5</span>
+            </button>
+            <button class="skills__button">
+              <span class="skills__button__ico fab fa-css3-alt"></span>
+              <span class="skills__button__name">CSS 3</span>
+            </button>
+            <button class="skills__button">
+              <span class="skills__button__ico fab fa-js"></span>
+              <span class="skills__button__name">Java Script</span>
+            </button>
+            <button class="skills__button">
+              <span class="skills__button__ico fab fa-sass"></span>
+              <span class="skills__button__name">SASS</span>
+            </button>
+            <button class="skills__button">
+              <span class="skills__button__ico fab fa-github"></span>
+              <span class="skills__button__name">Git</span>
+            </button>
+            <button class="skills__button">
+              <span class="skills__button__ico fas fa-database"></span>
+              <span class="skills__button__name">Backend</span>
+            </button>
+            <button class="skills__button">
+              <span class="skills__button__ico fas fa-ellipsis-h"></span>
+              <span class="skills__button__name">Inne</span>
+            </button>
+          </div>
+          <div class="skills__articles" id="skills-articles">
+            <article class="skills__article is-active">
+              <ul class="skills-list skills__article__item">
+                <li class="skills-list__item skills-list__item--dash">
+                  Bardzo dobra znajomość
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Tworzę poprawny semantycznie kod i staram się nie używać nadmiarowej ilości divów
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Tworzę kod przyjazny wyszukiwarkom
+                </li>
+              </ul>
+            
+            </article>
+            <article class="skills__article">
+              <ul class="skills-list skills__article__item">
+                <li class="skills-list__item skills-list__item--dash">
+                  Bardzo dobra znajomość
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Nie jest mi obcy ani flexbox i grid
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Tworzę responsywne style dopasowujące się do wszystkich ekranów
+                </li>
+              </ul>
+              <ul class="skills-list skills__article__item">
+                <li class="skills-list__item skills-list__item--dash">
+                  W swojej pracy korzystam z metodologii BEM
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Tworzę animacje, które upiększają stronę
+                </li>
+              </ul>
+            </article>
+            <article class="skills__article">
+              <ul class="skills-list skills__article__item">
+                <li class="skills-list__item skills-list__item--dash">
+                  Całkiem dobra znajomość
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Korzystam z standardów ECMAScript 6
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Znam obiektowość
+                </li>
+              </ul>
+              <ul class="skills-list skills__article__item">
+                <li class="skills-list__item skills-list__item--dash">
+                  Staram się nie korzystać z JQuery. Tylko Vanilla JS ! ;-)
+                </li>
+              </ul>
+            </article>
+            <article class="skills__article">
+              <ul class="skills-list skills__article__item">
+                <li class="skills-list__item skills-list__item--dash">
+                  Całkiem dobra znajomość
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Znam i korzystam z składni SCSS oraz SASS ale wolę tą pierwszą
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                  Nie są mi obce pętle, domieszki, zmienne,.. 
+                </li>
+              </ul>
+            </article>
+            <article class="skills__article">
+              <ul class="skills-list skills__article__item">
+                <li class="skills-list__item skills-list__item--dash">
+                  Średnia znajomość
+                </li>
+                <li class="skills-list__item skills-list__item--dash">
+                 Umiem pracować na branchach, pracować z zdalnym repozytorium, itd..
+                </li>
+              </ul>
+            </article>
+            <article class="skills__article">
+              <ul class="skills-list skills__article__item">
+                <ul class="skills-list skills__article__item">
+                  <li class="skills-list__item skills-list__item--dash">
+                    Mam podstawową znajomość PHP, ale póki co nie wykorzystywałem jej zbyt często w projektach
+                  </li>
+                  <li class="skills-list__item skills-list__item--dash">
+                    Mam także podstawową znajomość SQL
+                  </li>
+                </ul>
+            </article>
+            <article class="skills__article">
+              <ul class="skills-list">
+                <li class="skills-list__item">
+                  <span class="skills-list__title">JQuery</span> - znam ale rzadko korzystam
+                </li>
+                <li class="skills-list__item">
+                  <span class="skills-list__title">Photoshop(PSD2HTML)</span> - korzystam z Photoshopa do cięcia szablonów
+                </li>
+                <li class="skills-list__item">
+                  <span class="skills-list__title">avocode.com</span> - także używam do cięcia szablonów
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class="skills" data-animation="show">
+          <h3 class="skills__title section__title section__title--small">Uczę się</h3>
+          <div class="skills__articles">
+            <article class="skills__article no-animate data-animation="show">
+              <ul class="skills-list">
+                <li class="skills-list__item">
+                  <span class="skills-list__title">React JS</span> - jest to mój główny i najważniejszy punkt rozwoju. Mam jeszcze sporo pracy, ale jakże przyjemnej 
+                </li>
+                <li class="skills-list__item">
+                  <span class="skills-list__title">Wordpress</span> - uczę się podpinać szablony do Wordpressa
+                </li>
+                <li class="skills-list__item">
+                  <span class="skills-list__title">Bostrapp</span> - wolę sam tworzyć komponenty, ale ten framework jednak często się przydaje, więc z pewnością się go nauczę
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="realizations">
+      <h2 class="section__title">Realizacje</h2>
+      <div class="section__wrapper section__wrapper--full-mobile">
+        <div class="wrapper-portfolio">
+          <article class="portfolio" data-animation="scale">
+            <span class="fas fa-hand-pointer portfolio__hand"></span>
+            <picture>
+              <source srcset="./images/portfolio/430/kiedy_wolne_.jpg" media="(min-width: 1500px)">
+                <source srcset="./images/portfolio/400/kiedy_wolne_.jpg" media="(min-width: 1200px)">
+                <img src="./images/portfolio/300/kiedy_wolne_.jpg" class="portfolio__image"/>
+            </picture>
+            <div class="portfolio__content">
+              <h2 class="portfolio__title">kiedy-wolne.pl</h2>
+              <span class="portfolio__technologies-list">HTML, CSS, JS, SASS, PHP, SQL</span>
+              <p class="portfolio__description">Strona na podstawie własnegp projektu graficznego, której można sprawdzić daty, do wolnych dni</p>
+              <div class="portfolio__links">
+                <a href="https://github.com/Pachciar3/kiedy-wolne.pl" class="portfolio__link link-rect"><span class="link-rect__ico fab fa-github"></span><span
+                    class="link-rect__text">Kod</span></a>
+                <a href="https://kiedy-wolne.pl/" class="portfolio__link link-rect"><span class="link-rect__ico fas fa-eye"></span><span class="link-rect__text">Online</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio" data-animation="scale">
+            <span class="fas fa-hand-pointer portfolio__hand"></span>
+            <picture>
+              <source srcset="./images/portfolio/430/portfolio_.jpg" media="(min-width: 1500px)">
+                <source srcset="./images/portfolio/400/portfolio_.jpg" media="(min-width: 1200px)">
+                <img src="./images/portfolio/300/portfolio_.jpg" class="portfolio__image"/>
+            </picture>
+            <div class="portfolio__content">
+              <h2 class="portfolio__title">Własne portfolio</h2>
+              <span class="portfolio__technologies-list">HTML, CSS, JS, SCSS, PHP</span>
+              <p class="portfolio__description">Stworzone na podstawie własnego projektu graficznego</p>
+              <div class="portfolio__links">
+                <a href="https://github.com/Pachciar3/portfolio" class="portfolio__link link-rect"><span class="link-rect__ico fab fa-github"></span><span
+                    class="link-rect__text">Kod</span></a>
+                <a href="#" class="portfolio__link link-rect"><span class="link-rect__ico fas fa-eye"></span><span class="link-rect__text">Online</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio" data-animation="scale">
+            <span class="fas fa-hand-pointer portfolio__hand"></span>
+            <picture>
+              <source srcset="./images/portfolio/430/toDO_.jpg" media="(min-width: 1500px)">
+              <source srcset="./images/portfolio/400/toDO_.jpg" media="(min-width: 1200px)">
+              <img src="./images/portfolio/300/toDO_.jpg" class="portfolio__image"/>
+            </picture>
+            <div class="portfolio__content">
+              <h2 class="portfolio__title">To-do List</h2>
+              <span class="portfolio__technologies-list">HTML, CSS, JS(OOP), SASS</span>
+              <p class="portfolio__description">To-do lista ale napisana w obiektowym JavaScript i rozbudowana dodatkowo o kategorie i wyszukiwarkę</p>
+              <div class="portfolio__links">
+                <a href="https://github.com/Pachciar3/TO-DO-LIST" class="portfolio__link link-rect">
+                  <span class="link-rect__ico fab fa-github"></span>
+                  <span class="link-rect__text">Kod</span>
+                </a>
+                <a href="https://pachciar3.github.io/TO-DO-LIST/" class="portfolio__link link-rect">
+                  <span class="link-rect__ico fas fa-eye"></span>
+                  <span class="link-rect__text">Online</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio" data-animation="scale">
+            <span class="fas fa-hand-pointer portfolio__hand"></span>
+            <picture>
+              <source srcset="./images/portfolio/430/counsel_.jpg" media="(min-width: 1500px)">
+                <source srcset="./images/portfolio/400/counsel_.jpg" media="(min-width: 1200px)">
+                <img src="./images/portfolio/300/counsel_.jpg" class="portfolio__image"/>
+            </picture>
+            <div class="portfolio__content">
+              <h2 class="portfolio__title">Projekt PSD2HTML</h2>
+              <span class="portfolio__technologies-list">HTML, CSS, JS, SASS</span>
+              <p class="portfolio__description">Zwykły PSD2HTML na podstawie gotowego projektu graficznego</p>
+              <div class="portfolio__links">
+                <a href="https://github.com/Pachciar3/Counsel" class="portfolio__link link-rect">
+                  <span class="link-rect__ico fab fa-github"></span>
+                  <span class="link-rect__text">Kod</span>
+                </a>
+                <a href="https://pachciar3.github.io/Counsel/" class="portfolio__link link-rect">
+                  <span class="link-rect__ico fas fa-eye"></span>
+                  <span class="link-rect__text">Online</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio" data-animation="scale">
+            <span class="fas fa-hand-pointer portfolio__hand"></span>
+            <picture>
+              <source srcset="./images/portfolio/430/guess_.jpg" media="(min-width: 1500px)">
+                <source srcset="./images/portfolio/400/guess_.jpg" media="(min-width: 1200px)">
+                <img src="./images/portfolio/300/guess_.jpg" class="portfolio__image"/>
+            </picture>
+            <div class="portfolio__content">
+              <h2 class="portfolio__title">Guess the number</h2>
+              <span class="portfolio__technologies-list">HTML, CSS, JS, SASS</span>
+              <p class="portfolio__description">Prosta mini gierka napisana w JS, w której trzeba zgadanąć liczbę wylosowaną przez program. Dla leniwych: wpiszcie 1998 :D</p>
+              <div class="portfolio__links">
+                <a href="https://github.com/Pachciar3/guess-the-number" class="portfolio__link link-rect">
+                  <span class="link-rect__ico fab fa-github"></span>
+                  <span class="link-rect__text">Kod</span>
+                </a>
+                <a href="https://pachciar3.github.io/guess-the-number/" class="portfolio__link link-rect">
+                  <span class="link-rect__ico fas fa-eye"></span>
+                  <span class="link-rect__text">Online</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio" data-animation="scale">
+            <span class="fas fa-hand-pointer portfolio__hand"></span>
+            <picture>
+              <source srcset="./images/portfolio/no-image_desktop.png" media="(min-width: 1700px)">
+              <source srcset="./images/portfolio/no-image_tablet.png" media="(min-width: 780px)">
+              <img src="./images/portfolio/no-image_mobile.png" class="portfolio__image"/>
+            </picture>
+            <div class="portfolio__content">
+              <h2 class="portfolio__title">Pokoje Gościnne "Ustronie"</h2>
+              <span class="portfolio__technologies-list">HTML, CSS, JS, SCSS, Wordpress</span>
+              <p class="portfolio__description">W budowie</p>
+              <div class="portfolio__links">
+                <a href="http://www.pokojegoscinne.opoczno.pl/" class="portfolio__link link-rect">
+                  <span class="link-rect__ico fab fa-github"></span>
+                  <span class="link-rect__text">Kod</span>
+                </a>
+                <a href="http://www.pokojegoscinne.opoczno.pl/" class="portfolio__link link-rect">
+                  <span class="link-rect__ico fas fa-eye"></span>
+                  <span class="link-rect__text">Online</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--image" id="contact" style="
+    background-image: 
+    linear-gradient(45deg, rgba(0,0,0,0.6), rgba(158, 158, 158, 0.6)), url(images/programming2-bgc.png);
+    ">
+      <h2 class="section__title">Kontakt</h2>
+      <div class="section__wrapper col2">
+        <form class="contact">
+          <fieldset class="contact__field contact__field--text" data-animation="scale">
+            <label for="mail" class="contact__label">Email</label>
+            <input type="email" id="mail" class="contact__input contact__input--text" placeholder="Twój email" required>
+          </fieldset>
+          <fieldset class="contact__field contact__field--text" data-animation="scale">
+            <label for="subject" class="contact__label">Temat</label>
+            <input type="text" id="subject" class="contact__input contact__input--text" placeholder="Strona do wykonania" required>
+          </fieldset>
+          <fieldset class="contact__field contact__field--textarea" data-animation="scale">
+            <label for="message" class="contact__label">Wiadomość</label>
+            <textarea id="message" class="contact__input contact__input--textarea" placeholder="Napisz coś" required></textarea>
+          </fieldset>
+          <div class="contact__buttons" data-animation="scale">
+            <button class="contact__button">Wyślij</button>
+            <button class="contact__button" type="reset">Reset</button>
+          </div>
+        </form>
+        <div class="important-links">
+          <div class="link-ico" data-animation="scale">
+            <a href="" class="link-ico__ico"><span class="far fa-address-card"></span></a>
+            <a href="" class="link-ico__title">CV</a>
+          </div>
+          <div class="link-ico" data-animation="scale">
+            <a href="mailto:pachciar3@gmail.com" class="link-ico__ico"><span class="fas fa-at"></span></a>
+            <a href="mailto:pachciar3@gmail.com" class="link-ico__title">mail</a>
+          </div>
+          <div class="link-ico" data-animation="scale">
+            <a href="https://github.com/Pachciar3/" class="link-ico__ico"><span class="fab fa-github"></span></a>
+            <a href="https://github.com/Pachciar3/" class="link-ico__title">Github</a>
+          </div>
+          <div class="link-ico" data-animation="scale">
+            <a href="https://www.linkedin.com/in/dawid-pachciarek-5ab67416b" class="link-ico__ico"><span class="fab fa-linkedin"></span></a>
+            <a href="https://www.linkedin.com/in/dawid-pachciarek-5ab67416b" class="link-ico__title">Linkedin</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      &copy;2019 All rights reserved for Dawid Pachciarek
+    </footer>
+  </div>
+  <script>
+    const navBtn = document.getElementById('nav-btn');
+    const navBtnSpan = navBtn.querySelector('span')
+    const navLinks = document.querySelectorAll('.fixed-nav__nav__link')
+    const nav = document.getElementById('navigation');
+    //MOBILE MENU
+    let activeNavFlag = false;
+    const menuHandler = () => {
+      if (activeNavFlag) {
+        navBtnSpan.className = "fas fa-bars";
+        document.body.style.overflowY = "initial";
+      } else {
+        navBtnSpan.className = "fas fa-times";
+        document.body.style.overflowY = "hidden";
+      }
+      activeNavFlag = !activeNavFlag;
+      nav.classList.toggle('is-active');
+    }
+    navLinks.forEach(item => item.addEventListener('click', () => {
+      navBtnSpan.className = "fas fa-bars";
+      document.body.style.overflowY = "initial";
+      activeNavFlag = !activeNavFlag;
+      nav.classList.remove('is-active');
+    }));
+    navBtn.addEventListener('click', menuHandler);
+    document.addEventListener('scroll', () => {
+
+    });
+    //Skills component
+    const clearActive = className => {
+      document.querySelectorAll(className).forEach((item, id) => {
+        item.classList.remove('is-active');
+      })
+    }
+    document.querySelectorAll('#skills-btns button').forEach((item, id) => {
+      item.addEventListener('click', () => {
+        clearActive('#skills-btns button.is-active');
+        clearActive('#skills-articles article.is-active');
+        document.querySelector(`#skills-articles article:nth-child(${id+1})`).classList.add('is-active');
+        item.classList.add('is-active');
+      })
+    })
+    //Active section
+    const sectionsNames = ['#start', '#about-me', '#skills', '#realizations', '#contact'];
+    const sections = [...document.querySelectorAll(sectionsNames.toString(','))];
+    let checkActiveSection;
+    const activeSection = () => {
+      const sizesToTop = sections.map(item => item.offsetTop + item.offsetHeight / 2 - window.innerHeight)
+      checkActiveSection = () => {
+        sizesToTop.forEach((item, id) => {
+          if (window.scrollY > item) {
+            clearActive('#navigation a.is-active');
+            nav.querySelector(`a[data-scroll="${sectionsNames[id]}"]`).classList.add('is-active');
+          }
+        });
+      }
+      checkActiveSection();
+      document.addEventListener('scroll', checkActiveSection);
+    }
+    window.addEventListener('resize', ()=>{ document.removeEventListener('scroll',checkActiveSection); activeSection();});
+    activeSection();
+    //Scrolling animations
+    if (window.innerWidth >= 1024) {
+      const items = document.querySelectorAll('*[data-animation]');
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].hasAttribute("data-animation")) items[i].classList.add('hide');
+      }
+      const checkAnimate = () => {
+        for (let i = 0; i < items.length; i++) {
+          if (window.scrollY > items[i].offsetTop + items[i].offsetHeight / 2 - window.innerHeight) {
+            const className = items[i].getAttribute("data-animation");
+            items[i].classList.remove('hide');
+            items[i].classList.add(className);
+          }
+        }
+      }
+      document.addEventListener('scroll', checkAnimate);
+      checkAnimate();
+    }
+  </script>
+</body>
+
+</html>

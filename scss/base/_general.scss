@@ -1,0 +1,31 @@
+html,
+body {
+  font-size: 10px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 2000px;
+  width: 100%;
+  margin: 0px auto;
+  padding-top: 60px;
+}
+
+button:focus {
+  outline-color: $blue;
+}
+
+@media(min-width:800px)and(min-height:620px) {
+  .wrapper {
+    padding-top: 0px;
+    padding-left: 120px;
+  }
+}
+
+@media(min-width: 1200px)and(min-height:720px) {
+  .wrapper {
+    padding-left: 150px;
+  }
+}

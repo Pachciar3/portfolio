@@ -1,0 +1,149 @@
+.link {
+  text-decoration: none;
+  color: $white;
+  font-family: $font3;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  // overflow: hidden;
+  transition: .3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 15%;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    background-color: $blue;
+    transition: .3s;
+  }
+
+  &:hover {
+    color: $yellow;
+
+    &::before {
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+.link-rect{
+  text-decoration: none;
+  display: block;
+  height: 55px;
+  margin: 0px 5px;
+  background-color: #000;
+  color: $white;
+  font-size: 1rem;
+  display: flex;
+  transition: .3s;
+  &:hover{
+    background-color: $brown;
+  }
+  &__ico{
+    flex-shrink: 2;
+    font-size: 3.4em;
+    padding-left: 8px;
+    line-height: 55px;
+  }
+  &__text{
+    @include flexCenter();
+    width: 100%;
+    font-family: $font1;
+    font-size: 2.8em;
+    font-weight: 700;
+  }
+}
+
+.link-ico{
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  width: 90px;
+  margin-bottom: 10px;
+  &__ico{
+    width: 70px;
+    height: 70px;
+    background-color: $blue;
+    border-radius: 50%;
+    font-size: 3em;
+    line-height: 70px;
+    align-self: center;
+    margin-bottom: 10px;
+    box-shadow: -5px 4px 2px 2px #000;
+  }
+  &__title{
+    font-family: $font3;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  &__ico,&__title{
+    text-align: center;
+    transition: .3s;
+    color: $white;
+    order: 1;
+  }
+  &__ico:hover,&__title:hover{
+    color: $yellow;
+  }
+}
+
+@media(min-width: 1024px){
+  .link-ico{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &--hover-name &__title{
+      transform: scale(0);
+      transition: .3s;
+    }
+    &--hover-name:hover &__title{
+      transform: scale(1);
+    }
+    &__title{
+     flex-grow: 1;
+     margin-left: 10px;
+     padding: 8px 5px;
+     max-width: 230px;
+     &--left{
+       order: 0;
+       margin-left: 0px;
+       margin-right: 15px;
+     }
+    }
+  }
+}
+
+@media(min-width: 1200px){
+  .link-rect{
+    font-size: 1.3rem;
+    &__ico{
+      font-size: 2.8em;
+    }
+  }
+  .link-ico{
+    font-size: 1.3rem;
+    &__ico{
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+    }
+  }
+}
+
+@media(min-width: 1400px){
+  .link-rect{
+    height: 60px;
+  }
+}

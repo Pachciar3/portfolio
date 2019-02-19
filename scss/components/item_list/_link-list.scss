@@ -1,0 +1,42 @@
+.link-list {
+  font-size: 1rem;
+
+  &__title {
+    font-family: $font1;
+    font-size: 2.7em;
+    color: $yellow;
+    font-weight: 400;
+  }
+
+  &__list {
+    padding: 10px 5px 10px 15px;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+
+    a {
+      font-size: 1.6em;
+    }
+  }
+}
+
+@media(min-width:800px) {
+  .link-list__list {
+    padding: 10px 5px 10px 20px;
+  }
+}
+
+@media(min-width:1200px) {
+  .link-list {
+    font-size: 1.2rem;
+  }
+}
+@media(min-width: 1600px) {
+  .link-list {
+    font-size: 1.3rem;
+    &__list {
+      padding: 15px 5px 10px 20px;
+    }
+  }
+}

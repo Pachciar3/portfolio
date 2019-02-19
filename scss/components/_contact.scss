@@ -1,0 +1,108 @@
+.contact {
+  font-size: 1rem;
+
+  &__field {
+    display: block;
+    border: 0;
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    font-family: $font2;
+    font-size: 2.4em;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    font-family: $font1;
+    font-size: 1.9em;
+    color: $white;
+    background-color: rgba(157, 151, 151, 0.65);
+    border: 0;
+    padding: 20px;
+    width: 100%;
+    transition: .2s;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:focus {
+      background-color: rgba(157, 151, 151, 1);
+    }
+
+    &--text {
+      height: 50px;
+    }
+
+    &--textarea {
+      height: 270px;
+      resize: vertical;
+    }
+  }
+
+  &__button {
+    font-family: $font1;
+    font-size: 2.4em;
+    color: $white;
+    background-color: $brown;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: .2s;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      background-color: $lightBrown;
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .contact {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    // display:;
+    justify-content: space-between;
+
+    &__field--text {
+      width: 48%;
+    }
+
+    &__field--textarea {
+      width: 100%;
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    &__button {
+      width: 47%;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .contact {
+    font-size: 1.25rem;
+
+    &__input {
+      &--text {
+        height: 64px;
+      }
+    }
+    &__field {
+      margin-bottom: 20px;
+    }
+    &__button {
+      height: 64px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.icon{
+  position: absolute;
+  color: $yellow;
+  font-size: 4rem;
+  animation-name: showIcon;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@media(min-width: 1024px){
+  .icon{
+    font-size: 5rem;
+  }
+}
+@media(min-width: 1300px){
+  .icon{
+    font-size: 6rem;
+  }
+}

@@ -1,0 +1,162 @@
+.skills {
+  margin-bottom: 20px;
+
+  &__title {
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 3px $blue;
+    letter-spacing: 2px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 10px;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    min-height: 82px;
+    padding: 3px;
+    background-color: $brown;
+    color: $yellow;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .3s;
+
+    &.is-active {
+      background-color: $lightBrown;
+    }
+
+    &__ico {
+      font-size: 4em;
+    }
+
+    &__name {
+      font-family: $font1;
+      font-size: 1.6em;
+      font-weight: 700;
+    }
+  }
+
+  &__article {
+    margin: 0px 10px;
+    background-color: $lightBrown;
+    padding: 10px;
+    display: none;
+    overflow: hidden;
+
+    &.is-active,&.no-animate {
+      display: block;
+    }
+  }
+
+  &__article.is-active &__description,
+  &__article.is-active .skills-list {
+    animation: show .4s .2s both;
+  }
+
+}
+
+@media(min-width: 620px) {
+  .skills {
+    &__button {
+      flex-direction: row;
+      width: 145px;
+      min-height: 50px;
+
+      &__ico {
+        flex-shrink: 1;
+        width: 45px;
+        margin-left: 5px
+      }
+
+      &__name {
+        font-size: 2.1em;
+        flex-grow: 1;
+      }
+    }
+
+    &__article {
+      padding: 15px 20px;
+      justify-content: space-between;
+
+      &.is-active {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      &__item {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: none;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width:1024px) {
+  .skills {
+    &__article__item {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .skills {
+    margin-bottom: 40px;
+
+    &__button {
+      width: 190px;
+      min-height: initial;
+      height: 60px;
+      font-size: 1.3rem;
+    }
+    &__article__item {
+      margin-right: 40px;
+    }
+  }
+}
+
+@media(min-width: 1400px) {
+  .skills {
+
+    &__buttons,
+    &__article {
+      margin: 0px 0px 0px 40px
+    }
+
+    &__article {
+      padding: 20px 25px;
+    }
+  }
+}
+
+@media(min-width: 1600px) {
+  .skills {
+    &__button {
+      width: 220px;
+      height: 70px;
+      font-size: 1.3rem;
+
+      &__ico {
+        padding: 0px 10px;
+      }
+
+      &__name {
+        font-size: 2.5em;
+      }
+    }
+
+    &__article {
+      font-size: 2.3rem;
+    }
+  }
+}

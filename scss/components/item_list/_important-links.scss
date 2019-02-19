@@ -1,0 +1,13 @@
+.important-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media(min-width: 1024px) {
+  .important-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

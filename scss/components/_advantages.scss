@@ -1,0 +1,121 @@
+.advantages {
+  padding: 40px 3vw 20px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  font-family: $font2;
+  justify-content: space-between;
+
+  &__advantage {
+    @include flexCenter();
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 6px solid $blue;
+    border-radius: 50%;
+    background-color: $white;
+    margin-bottom: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background-color: $blue;
+      width: 100%;
+      right: -100%;
+      top: 50%;
+      display: none;
+    }
+
+    &:nth-child(2n-1)::before {
+      display: block;
+    }
+  }
+}
+
+@media(min-width:340px) {
+  .advantages {
+    font-size: 2.5rem;
+
+    &__advantage {
+      width: 140px;
+      height: 140px;
+    }
+  }
+}
+
+@media(min-width:430px) {
+  .advantages {
+    padding: 40px 0px 20px;
+    width: 380px;
+    margin: 0 auto;
+  }
+}
+
+@media(min-width:565px) {
+  .advantages {
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0px;
+
+    &__advantage {
+      font-size: 2rem;
+      width: 120px;
+      height: 120px;
+
+      &:nth-child(2n):not(:last-child)::before {
+        display: block;
+      }
+    }
+  }
+}
+
+@media(min-width:660px) {
+  .advantages__advantage {
+    font-size: 2.5rem;
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media(min-width:1024px) {
+  .advantages__advantage {
+    font-size: 2rem;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .advantages__advantage {
+    font-size: 2.8rem;
+    width: 145px;
+    height: 145px;
+  }
+}
+
+@media(min-width: 1500px) {
+  .advantages__advantage {
+    font-size: 2.9rem;
+    width: 165px;
+    height: 165px;
+  }
+}
+
+@media(min-width: 1600px) {
+  .advantages {
+    padding: 40px 10px 20px 10px;
+
+    &__advantage {
+      font-size: 3rem;
+      width: 175px;
+      height: 175px;
+    }
+  }
+}
+
+@media(min-width: 1700px) {
+  .advantages {
+    padding: 60px 30px 20px 30px;
+  }
+}

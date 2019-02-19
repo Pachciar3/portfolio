@@ -1,0 +1,59 @@
+.about-me {
+  font-family: $font3;
+  font-size: 1rem;
+
+  &__title {
+    display: block;
+    color: $blue;
+    font-weight: 700;
+    text-align: center;
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+
+  &__desc {
+    text-align: center;
+    font-size: 2.2em;
+    letter-spacing: 1.1px;
+  }
+}
+
+@media(min-width: 620px) {
+  .about-me {
+    &__title {
+      font-size: 2.8em;
+
+      &::after {
+        content: " ";
+      }
+    }
+
+    &__title,
+    &__desc {
+      display: inline;
+      font-family: $font1;
+      letter-spacing: 1.1px;
+      line-height: 1.1;
+    }
+  }
+
+}
+
+@media(min-width: 1200px) {
+  .about-me {
+    &__title {
+      font-size: 3.1em;
+      line-height: 1.2;
+    }
+
+    &__desc {
+      font-size: 2.4em;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .about-me {
+    font-size: 1.08rem;
+  }
+}

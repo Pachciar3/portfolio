@@ -1,0 +1,93 @@
+$itemSize: 72px;
+$listLeftPadding: 10px;
+$listTopPadding: 10px;
+$listBottomPadding: 10px;
+$lineSize: 4px;
+
+.timeline {
+  font-size: 1rem;
+
+  &__list {
+    padding: $listTopPadding 0px $listBottomPadding $listLeftPadding;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(#{$itemSize} / 2 + #{$listLeftPadding} - #{$lineSize} / 2);
+      top: $listTopPadding;
+      width: 4px;
+      background-color: $brown;
+      height: calc(100% - (#{$listBottomPadding} + #{$listTopPadding}));
+      z-index: -1;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 30px;
+
+    &--long {
+      margin-bottom: 60px;
+    }
+    &--middle {
+      margin-bottom: 45px;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__date {
+    @include flexCenter();
+    width: $itemSize;
+    height: $itemSize;
+    font-size: 2em;
+    font-family: $font2;
+    border: 2px solid $brown;
+    border-radius: 50%;
+    background-color: $white;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    font-family: $font3;
+    font-weight: 700;
+    font-size: 2.1em;
+    line-height: 1;
+    color: $brown;
+  }
+}
+
+@media(min-width: 1200px) {
+  $itemSize: 82px;
+  $listTopPadding: 20px;
+  $listLeftPadding: 15px;
+
+  .timeline {
+    font-size: 1.2rem;
+
+    &__list {
+      padding: $listTopPadding 0px $listBottomPadding $listLeftPadding;
+
+      &::before {
+        top: $listTopPadding;
+        left: calc(#{$itemSize} / 2 + #{$listLeftPadding} - #{$lineSize} / 2);
+        height: calc(100% - (#{$listBottomPadding} + #{$listTopPadding}));
+      }
+    }
+
+    &__date {
+      width: $itemSize;
+      height: $itemSize;
+
+    }
+    &__text {
+      padding-left: 20px;
+    }
+  }
+}
