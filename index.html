@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php error_reporting(0); ?>
 <html lang="pl">
 
 <head>
@@ -460,55 +459,28 @@
     background-image: 
     linear-gradient(45deg, rgba(0,0,0,0.6), rgba(158, 158, 158, 0.6)), url(images/programming2-bgc.png);
     ">
-        <?php
-      if(isset($_POST['submit'])){
-        $subject = htmlspecialchars(stripslashes(trim($_POST['subject'])));
-        $email = htmlspecialchars(stripslashes(trim($_POST['email'])));
-        $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
-        if(strlen($subject) < 3){
-          $subject_error = 'Nie za krótki ten tytuł ?';
-        }
-        if(!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/", $email)){
-          $email_error = 'Wpisz poprawny email';
-        }
-        if(strlen($message) === 0){
-          $message_error = 'Twoja wiadomość nie może być pusta';
-        }
-      }
-    ?>
       <h2 class="section__title">Kontakt</h2>
       <div class="section__wrapper col2">
-        <form class="contact" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+        <form class="contact" action="https://formspree.io/pachciar3@gmail.com" method="POST">
           <fieldset class="contact__field contact__field--text" data-animation="scale">
             <label for="mail" class="contact__label">Email</label>
             <input type="email" name="email" id="mail" class="contact__input contact__input--text" placeholder="Twój email" required>
-            <span class="contact__info"><?php if(isset($email_error)) echo $email_error; ?></span>
+            <span class="contact__info"></span>
           </fieldset>
           <fieldset class="contact__field contact__field--text" data-animation="scale">
             <label for="subject" class="contact__label">Temat</label>
             <input type="text" name="subject" id="subject" class="contact__input contact__input--text" placeholder="Strona do wykonania" required>
-            <span class="contact__info"><?php if(isset($subject_error)) echo $subject_error; ?></span>
+            <span class="contact__info"></span>
           </fieldset>
           <fieldset class="contact__field contact__field--textarea" data-animation="scale">
             <label for="message" class="contact__label">Wiadomość</label>
             <textarea id="message" name="message" class="contact__input contact__input--textarea" placeholder="Napisz coś" required></textarea>
-            <span class="contact__info"><?php if(isset($message_error)) echo $message_error; ?></span>
+            <span class="contact__info"></span>
           </fieldset>
           <div class="contact__buttons" data-animation="scale">
-          <button class="contact__button" type="submit" name="submit">Wyślij</button>
+          <button class="contact__button" type="submit">Wyślij</button>
             <button class="contact__button" type="reset">Reset</button>
           </div>
-          <?php 
-          if(isset($_POST['submit']) && !isset($subject_error) && !isset($email_error) && !isset($message_error)){
-            $to = 'pachciar3@gmail.com';
-            $body = "Wiadomość z portfolio\n E-mail: $email\n Wiadomość:\n $message";
-            if(mail($to, $subject, $body)){
-              echo '<span class="contact__info contact__info--good">Wysłano poprawnie</span>';
-            }else{
-              echo '<span class="contact__info">Nie udało się wysłać. Spróbuj ponownie</span>';
-            }
-          }
-        ?>
         </form>
         <div class="important-links">
           <div class="link-ico" data-animation="scale">
