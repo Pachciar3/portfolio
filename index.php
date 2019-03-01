@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php error_reporting(0); ?>
 <html lang="pl">
 
 <head>
@@ -8,6 +9,11 @@
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/main.min.css">
   <title>Dawid Pachciarek - junior front-end developer</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg">
 </head>
 
 <body>
@@ -81,8 +87,8 @@
       <div class="main-header__right">
         <div class="important-links" data-animation="opacity-elements4">
           <div class="link-ico link-ico--hover-name">
-            <a href="" class="link-ico__ico"><span class="far fa-address-card"></span></a>
-            <a href="" class="link-ico__title link-ico__title--left">CV</a>
+            <a href="data/cv.pdf" class="link-ico__ico"><span class="far fa-address-card"></span></a>
+            <a href="data/cv.pdf" class="link-ico__title link-ico__title--left">CV</a>
           </div>
           <div class="link-ico link-ico--hover-name">
             <a href="mailto:pachciar3@gmail.com" class="link-ico__ico"><span class="fas fa-at"></span></a>
@@ -427,9 +433,9 @@
           <article class="portfolio" data-animation="scale">
             <span class="fas fa-hand-pointer portfolio__hand"></span>
             <picture>
-              <source srcset="./images/portfolio/no-image_desktop.png" media="(min-width: 1700px)">
-              <source srcset="./images/portfolio/no-image_tablet.png" media="(min-width: 780px)">
-              <img src="./images/portfolio/no-image_mobile.png" class="portfolio__image"/>
+              <source srcset="./images/portfolio/430/guess_.jpg" media="(min-width: 1500px)">
+                <source srcset="./images/portfolio/400/guess_.jpg" media="(min-width: 1200px)">
+                <img src="./images/portfolio/300/guess_.jpg" class="portfolio__image"/>
             </picture>
             <div class="portfolio__content">
               <h2 class="portfolio__title">Pokoje Gościnne "Ustronie"</h2>
@@ -454,30 +460,60 @@
     background-image: 
     linear-gradient(45deg, rgba(0,0,0,0.6), rgba(158, 158, 158, 0.6)), url(images/programming2-bgc.png);
     ">
+        <?php
+      if(isset($_POST['submit'])){
+        $subject = htmlspecialchars(stripslashes(trim($_POST['subject'])));
+        $email = htmlspecialchars(stripslashes(trim($_POST['email'])));
+        $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
+        if(strlen($subject) < 3){
+          $subject_error = 'Nie za krótki ten tytuł ?';
+        }
+        if(!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/", $email)){
+          $email_error = 'Wpisz poprawny email';
+        }
+        if(strlen($message) === 0){
+          $message_error = 'Twoja wiadomość nie może być pusta';
+        }
+      }
+    ?>
       <h2 class="section__title">Kontakt</h2>
       <div class="section__wrapper col2">
-        <form class="contact">
+        <form class="contact" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
           <fieldset class="contact__field contact__field--text" data-animation="scale">
             <label for="mail" class="contact__label">Email</label>
-            <input type="email" id="mail" class="contact__input contact__input--text" placeholder="Twój email" required>
+            <input type="email" name="email" id="mail" class="contact__input contact__input--text" placeholder="Twój email" required>
+            <span class="contact__info"><?php if(isset($email_error)) echo $email_error; ?></span>
           </fieldset>
           <fieldset class="contact__field contact__field--text" data-animation="scale">
             <label for="subject" class="contact__label">Temat</label>
-            <input type="text" id="subject" class="contact__input contact__input--text" placeholder="Strona do wykonania" required>
+            <input type="text" name="subject" id="subject" class="contact__input contact__input--text" placeholder="Strona do wykonania" required>
+            <span class="contact__info"><?php if(isset($subject_error)) echo $subject_error; ?></span>
           </fieldset>
           <fieldset class="contact__field contact__field--textarea" data-animation="scale">
             <label for="message" class="contact__label">Wiadomość</label>
-            <textarea id="message" class="contact__input contact__input--textarea" placeholder="Napisz coś" required></textarea>
+            <textarea id="message" name="message" class="contact__input contact__input--textarea" placeholder="Napisz coś" required></textarea>
+            <span class="contact__info"><?php if(isset($message_error)) echo $message_error; ?></span>
           </fieldset>
           <div class="contact__buttons" data-animation="scale">
-            <button class="contact__button">Wyślij</button>
+          <button class="contact__button" type="submit" name="submit">Wyślij</button>
             <button class="contact__button" type="reset">Reset</button>
           </div>
+          <?php 
+          if(isset($_POST['submit']) && !isset($subject_error) && !isset($email_error) && !isset($message_error)){
+            $to = 'pachciar3@gmail.com';
+            $body = "Wiadomość z portfolio\n E-mail: $email\n Wiadomość:\n $message";
+            if(mail($to, $subject, $body)){
+              echo '<span class="contact__info contact__info--good">Wysłano poprawnie</span>';
+            }else{
+              echo '<span class="contact__info">Nie udało się wysłać. Spróbuj ponownie</span>';
+            }
+          }
+        ?>
         </form>
         <div class="important-links">
           <div class="link-ico" data-animation="scale">
-            <a href="" class="link-ico__ico"><span class="far fa-address-card"></span></a>
-            <a href="" class="link-ico__title">CV</a>
+            <a href="data/cv.pdf" class="link-ico__ico"><span class="far fa-address-card"></span></a>
+            <a href="data/cv.pdf" class="link-ico__title">CV</a>
           </div>
           <div class="link-ico" data-animation="scale">
             <a href="mailto:pachciar3@gmail.com" class="link-ico__ico"><span class="fas fa-at"></span></a>

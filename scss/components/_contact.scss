@@ -13,6 +13,15 @@
     color: $white;
     text-transform: uppercase;
   }
+  &__info{
+    font-family: $font3;
+    font-size: 1.3em;
+    color: red;
+    padding: 0px 5px;
+    &--good{
+      color: $yellow;
+    }
+  }
 
   &__input {
     font-family: $font1;
