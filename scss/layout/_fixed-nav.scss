@@ -111,7 +111,8 @@
         text-align: center;
 
         img {
-          width: 70%;
+          display: block;
+          width: 100%;
         }
       }
 
@@ -168,10 +169,6 @@
         font-size: 4.2rem;
         margin-bottom: 5px
       }
-    }
-
-    &__character__image img {
-      width: 80%;
     }
   }
 }
