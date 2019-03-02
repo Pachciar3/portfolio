@@ -90,6 +90,9 @@
 
   &__link {
     width: 50%;
+    &--one{
+      width: 60%;
+    }
   }
 
   &:hover {
@@ -117,6 +120,9 @@
     .portfolio__links {
       display: flex;
       animation: fadeInDown .4s linear .6s both;
+      &--center{
+        justify-content: center;
+      }
     }
   }
 }
